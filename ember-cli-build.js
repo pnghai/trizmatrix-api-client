@@ -8,7 +8,8 @@ module.exports = function (defaults) {
     // var EmberApp = require('ember-cli/lib/broccoli/ember-app');
     sassOptions: {
       includePaths: [
-        'bower_components/bootstrap-sass/assets/stylesheets'
+        'bower_components/bootstrap-sass/assets/stylesheets',
+        'bower_components/font-awesome/scss'
       ]
     }
   });
