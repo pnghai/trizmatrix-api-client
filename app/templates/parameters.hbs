@@ -1,0 +1,10 @@
+<ul>
+  {{#each model as |parameter|}}
+      <li>
+          <strong>{{parameter.title}}</strong><br>
+          <strong>{{parameter.englishTitle}}</strong><br>
+          <em></em>
+        {{parameter.explanation}}
+      </li>
+  {{/each}}
+</ul>
