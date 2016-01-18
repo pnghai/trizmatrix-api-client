@@ -16,8 +16,8 @@ module.exports = function(environment) {
     APP: {
       API_HOST: '/',
       API_HOST_PROXY: 'http://api.homestead.app/',
-      API_PATH: 'v1',
-    },
+      API_PATH: 'v1'
+    }
 
   };
 
