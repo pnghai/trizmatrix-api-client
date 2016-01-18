@@ -3,6 +3,10 @@
 
 Router = Ember.Router.extend(location: config.locationType)
 Router.map ->
-  @route 'principles'
+  @route 'principles',->
+    @route 'principle', path: ':principle_id'
+    return
+  @route 'parameters'
+  return
 
 `export default Router;`

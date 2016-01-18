@@ -1,3 +1,13 @@
-<h2 id="title">Welcome to Ember</h2>
-{{#link-to 'principles'}}Check out principles{{/link-to}}
-{{outlet}}
+<div class="container">
+    <div class="page-header">
+      {{#link-to "index"}}
+          <h1>Rock & Roll<small> with Ember.js</small></h1>
+      {{/link-to}}
+
+      {{#link-to 'principles'}}Check out principles{{/link-to}}
+      {{#link-to 'parameters'}}Check out parameters{{/link-to}}
+    </div>
+    <div class="row">
+      {{outlet}}
+    </div>
+</div>
