@@ -14,9 +14,11 @@ module.exports = function(environment) {
     },
 
     APP: {
-      // Here you can pass flags/options to your application instance
-      // when it is created
-    }
+      API_HOST: '/',
+      API_HOST_PROXY: 'http://api.homestead.app/',
+      API_PATH: 'v1',
+    },
+
   };
 
   if (environment === 'development') {
