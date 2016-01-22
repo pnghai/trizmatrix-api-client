@@ -4,9 +4,11 @@
 Router = Ember.Router.extend(location: config.locationType)
 Router.map ->
   @route 'principles',->
-    @route 'principle', path: ':principle_id'
+    @route 'show', path: ':principle_id'
     return
-  @route 'parameters'
+  @route 'parameters',->
+    @route 'show', path: ':parameter_id'
+    return
   return
 
 `export default Router;`
