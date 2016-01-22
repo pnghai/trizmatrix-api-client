@@ -1,10 +1,16 @@
-<ul>
-  {{#each model as |parameter|}}
-      <li>
-          <strong>{{parameter.title}}</strong><br>
-          <strong>{{parameter.englishTitle}}</strong><br>
-          <em></em>
-        {{parameter.explanation}}
-      </li>
-  {{/each}}
-</ul>
+<section class="list-parameters">
+  <div class="col-md-4">
+    <ul>
+      {{#each model as |parameter|}}
+          <li>
+            {{#link-to "parameters.show" parameter}}{{parameter.title}}{{/link-to}}
+          </li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="col-md-8">
+      <div class="list-group">
+        {{outlet}}
+      </div>
+  </div>
+</section>

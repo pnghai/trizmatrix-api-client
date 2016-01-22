@@ -1,14 +1,16 @@
-<div class="col-md-4">
+<section class="list-principles">
+  <div class="col-md-4">
     <ul>
       {{#each model as |principle|}}
           <li>
-              {{#link-to principle.id}}{{principle.title}}{{/link-to}}
+              {{#link-to "principles.show" principle}}{{principle.title}}{{/link-to}}
           </li>
       {{/each}}
     </ul>
-</div>
-<div class="col-md-8">
-    <div class="list-group">
-      {{outlet}}
-    </div>
-</div>
+  </div>
+  <div class="col-md-8">
+      <div class="list-group">
+        {{outlet}}
+      </div>
+  </div>
+</section>

@@ -2,7 +2,7 @@
 
 PrinciplesShowRoute = Ember.Route.extend(model: (params) ->
 
-  @store.findRecord 'parameter', params.principle_id
+  @store.findRecord 'principle', params.principle_id
 
 )
 
