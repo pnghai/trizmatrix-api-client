@@ -1,6 +1,8 @@
 /*jshint node:true*/
 /* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var Funnel = require('broccoli-funnel');
+var MergeTrees = require('broccoli-merge-trees');
 
 module.exports = function (defaults) {
   var app = new EmberApp(defaults, {
@@ -8,9 +10,11 @@ module.exports = function (defaults) {
     // var EmberApp = require('ember-cli/lib/broccoli/ember-app');
     sassOptions: {
       includePaths: [
-        'bower_components/bootstrap-sass/assets/stylesheets',
-        'bower_components/font-awesome/scss'
+        'bower_components/bootstrap-sass/assets/stylesheets'
       ]
+    },
+    emberCliFontAwesome: {
+      useScss: true
     }
   });
 
@@ -28,6 +32,12 @@ module.exports = function (defaults) {
   // modules that you would like to import into your application
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
+  // Copy only the relevant files. For example the WOFF-files and stylesheets for a webfont:
 
-  return app.toTree();
+  var extraAssets = new Funnel('bower_components/bootstrap-sass', {
+    exclude: ['**/*.scss','**/*.js']
+  });
+
+  return app.toTree(new MergeTrees([extraAssets]));
 };
+
