@@ -7,6 +7,10 @@
           </li>
       {{/each}}
     </ul>
+
+    {{#each-in model.meta.pagination as |key value|}}
+      {{link-to key "parameters" (query-params page=value.number)}}
+    {{/each-in}}
   </div>
   <div class="col-md-8">
       <div class="list-group">
