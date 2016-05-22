@@ -1,20 +1,17 @@
 <section class="list-principles">
-  <div class="col-md-4">
-    <ul>
-      {{#each model as |principle|}}
-          <li>
-              {{#link-to "principles.show" principle}}{{principle.title}}{{/link-to}}
-          </li>
-      {{/each}}
-    </ul>
-
-    {{#each-in model.meta.pagination as |key value|}}
-      {{link-to key "principles" (query-params page=value.number)}}
-    {{/each-in}}
-  </div>
-  <div class="col-md-8">
-      <div class="list-group">
-        {{outlet}}
-      </div>
-  </div>
+    <div class="col s12 m4">
+      {{#md-collection content=model header='Nguyên tắc (Thủ Thuật)' as |item|}}
+        {{link-to item.title "principles.show" item class='collection-item'}}
+      {{/md-collection}}
+      <ul class="pagination">
+        {{#each-in model.meta.pagination as |key value|}}
+            <li class="waves-effect">{{link-to key "parameters" (query-params page=value.number)}}</li>
+        {{/each-in}}
+      </ul>
+    </div>
+    <div class="col s12 m8">
+        <div class="list-group">
+          {{outlet}}
+        </div>
+    </div>
 </section>

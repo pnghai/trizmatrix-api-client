@@ -8,12 +8,10 @@ module.exports = function (defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
     // var EmberApp = require('ember-cli/lib/broccoli/ember-app');
-    'ember-bootstrap': {
-      'importBootstrapTheme': true
-    },
     sassOptions: {
       includePaths: [
         //'bower_components/bootstrap-sass/assets/stylesheets'
+        'bower_components/materialize/sass'
       ]
     },
     emberCliFontAwesome: {

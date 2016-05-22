@@ -1,1 +1,7 @@
 @import "font-awesome";
+
+// Custom color settings go here
+$roboto-font-path: '../assets/';
+
+@import 'materialize';
+@import 'ember-cli-materialize';

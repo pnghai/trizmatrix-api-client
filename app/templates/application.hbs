@@ -1,13 +1,23 @@
+<div class="navbar-fixed">
+  {{#md-navbar name='TRIZMatrix' class='light-blue darken-2'}}
+    {{#link-to 'parameters' tagName='li'}}
+      {{link-to 'Thông số' 'parameters'}}
+    {{/link-to}}
+    {{#link-to 'principles' tagName='li'}}
+      {{link-to 'Nguyên tắc' 'principles'}}
+    {{/link-to}}
+  {{/md-navbar}}
+</div>
 <div class="container">
-    <div class="page-header">
-      {{#link-to "index"}}
-          <h1>Rock & Roll<small> with Ember.js</small></h1>
-      {{/link-to}}
-
-      {{#link-to 'principles'}}Check out principles{{/link-to}}
-      {{#link-to 'parameters'}}Check out parameters{{/link-to}}
-    </div>
     <div class="row">
       {{outlet}}
     </div>
 </div>
+
+<footer class='page-footer light-blue darken-1 white-text'>
+  {{#md-copyright text='Bản quyền thuộc về cstc.vn' startYear=2016 class='light-blue darken-1 white-text'}}
+      <a class="white-text right" href="http://cstc.vn">
+          Cstc.vn
+      </a>
+  {{/md-copyright}}
+</footer>
