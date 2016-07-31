@@ -14,7 +14,7 @@ module.exports = function(environment) {
     },
 
     APP: {
-      API_HOST_PROXY: 'http://api.homestead.app',
+      API_HOST_PROXY: 'http://desolate-basin-50290.herokuapp.com',
       API_PATH: 'v1'
     }
 
