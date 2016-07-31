@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'trizmatrix-api-client',
     environment: environment,
-    baseURL: '/',
+    rootURL: '/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -17,7 +17,6 @@ module.exports = function(environment) {
       API_HOST_PROXY: 'http://desolate-basin-50290.herokuapp.com',
       API_PATH: 'v1'
     }
-
   };
 
   if (environment === 'development') {
@@ -30,7 +29,6 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.baseURL = '/';
     ENV.locationType = 'none';
 
     // keep test console output quieter
