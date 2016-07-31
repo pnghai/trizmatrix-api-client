@@ -1,4 +1,5 @@
 `import Ember from 'ember'`
+`const { computed } = Ember`
 
 PrinciplesController = Ember.Controller.extend(
   queryParams: [
@@ -7,7 +8,7 @@ PrinciplesController = Ember.Controller.extend(
   ]
   page: 1
   size: 10
-  count: Ember.computed('model.meta.pagination.last.number', 'model.meta.pagination.self.number', ->
+  count: computed('model.meta.pagination.last.number', 'model.meta.pagination.self.number', ->
     total = @get('model.meta.pagination.last.number') or @get('model.meta.pagination.self.number')
     if !total
       return []
