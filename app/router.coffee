@@ -1,7 +1,9 @@
 `import Ember from 'ember';`
 `import config from './config/environment';`
 
-Router = Ember.Router.extend(location: config.locationType)
+Router = Ember.Router.extend(
+  location: config.locationType
+  rootURL: config.rootURL)
 Router.map ->
   @route 'index', { path: '/' }, ->
     @route 'solutions', path: '/improvement/:improve_id/preservation/:preserved_id/solutions'
