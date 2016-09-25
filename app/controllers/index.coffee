@@ -2,8 +2,8 @@
 
 IndexController = Ember.Controller.extend(
   actions:
-    showSolutions: ->
-      @transitionToRoute('improvement/1/preservation/2/solutions')
+    showSolutions: (select)->
+      @transitionToRoute('index/solutions/')
 )
 
 `export default IndexController`
