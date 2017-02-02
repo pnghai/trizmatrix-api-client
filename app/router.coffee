@@ -5,9 +5,7 @@ Router = Ember.Router.extend(
   location: config.locationType
   rootURL: config.rootURL)
 Router.map ->
-  @route 'index', { path: '/' }, ->
-    @route 'solutions', path: '/solutions/:improve_id/:preserved_id/'
-    return
+  @route 'solutions'
   @route 'principles',->
     @route 'show', path: ':principle_id'
     return
