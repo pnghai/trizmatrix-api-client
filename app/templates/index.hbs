@@ -12,10 +12,9 @@
                 <label for="first_name">Thông số cần cải tiến</label>
                 {{#power-select
                   options=model
-                  selected=improve
+                  selected=improved
                   allowClear=true
-                  onchange=(action (mut improve))
-                  onclose=(action "showSolutions")
+                  onchange=(action (mut improved))
                   placeholder="Xin chon thong so can cai tien"
                 as |params|}}
                   {{params.id}}- {{params.title}}
@@ -31,9 +30,8 @@
                   selected=preserved
                   allowClear=true
                   onchange=(action (mut preserved))
-                  onclose=(action "showSolutions")
                   placeholder="Xin chon thong so can khac phuc" as |params|}}
-                  {{params.title}}
+                  {{params.id}}- {{params.title}}
                 {{/power-select}}
               </div>
             </div>
