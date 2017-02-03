@@ -1,7 +1,10 @@
 `import Ember from 'ember'`
 
 SolutionsController = Ember.Controller.extend(
-  queryParams: ['improvedParam', 'preservedParam']
+  queryParams: [
+    'improvedParam'
+    'preservedParam'
+  ]
   improvedParam: null
   preservedParam: null
 
